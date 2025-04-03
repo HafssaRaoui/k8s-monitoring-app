@@ -37,7 +37,15 @@ aws configure
 - Dockerize the Application  =  write the Dockerfile + build + run + test app accessibility
 - Deploy the application on a kubernetes cluster using python kubernetes client
 
-## Step1 : Setting up the application source code
+## Table of Contents 📑
+- [Step 1: Setting up the application source code](#step-1-setting-up-the-application-source-code)
+- [Step 2: Dockerize the application](#step-2-dockerize-the-application)
+- [Step 3: Deploy the application in a Kubernetes cluster using EKS AWS service](#step-3-deploy-the-application-in-a-kubernetes-cluster-using-eks-aws-service)
+
+
+
+
+## Step 1: Setting up the application source code
 
 This step won't take much time , the src code is already available on the repository \
 The main application code is found in [app.py](https://github.com/HafssaRaoui/k8s-monitoring-app/blob/main/app.py)  .\
@@ -64,7 +72,7 @@ You should see something like this :
 ![Screenshot from 2025-04-03 12-09-26](https://github.com/user-attachments/assets/daf16644-4b98-458c-8883-8d95c48159ce) \
 Try to refresh the browser , the values will change since the measurement is done on real time
 
-## Step2 : Dockerize the application
+## Step 2: Dockerize the application
 
 What we will do is build the image of our application , and test its accessibility as a container .
 
@@ -96,7 +104,7 @@ docker run -p 5000:5000 image-id
 If everything is cool you will get access to your application on http://localhost:5000/ 
 ![Screenshot from 2025-04-03 12-50-08](https://github.com/user-attachments/assets/e25a026c-7314-40d3-99e9-c7229555ea52)
 
-## Step3 : Deploy the application in a kubernetes cluster using EKS AWS service
+## Step 3: Deploy the application in a Kubernetes cluster using EKS AWS service
 
 Cool , so we have our appilcation image built , what do we do with it ?
 
