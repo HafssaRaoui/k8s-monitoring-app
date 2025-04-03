@@ -37,7 +37,7 @@ aws configure
 - Dockerize the Application  =  write the Dockerfile + build + run + test app accessibility
 - Deploy the application on a kubernetes cluster using python kubernetes client
 
-## Table of Contents 📑
+## Project Detailed Steps: 📑
 - [Step 1: Setting up the application source code](#step-1-setting-up-the-application-source-code)
 - [Step 2: Dockerize the application](#step-2-dockerize-the-application)
 - [Step 3: Deploy the application in a Kubernetes cluster using EKS AWS service](#step-3-deploy-the-application-in-a-kubernetes-cluster-using-eks-aws-service)
