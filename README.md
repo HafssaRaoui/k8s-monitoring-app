@@ -119,7 +119,7 @@ you need to add the [ecr.py](https://github.com/HafssaRaoui/k8s-monitoring-app/b
 - Here we need an ECR client service
 - Make the create_repository api call (Specify the name of your repository)
 
-By the end , you should find the repository created in aws ECR
+By the end , you should find the repository created in aws ECR \
 Follow the instructed commands in order to push the image into your repository \
 Just run them all sequencely
 ![Screenshot from 2025-04-03 16-23-12](https://github.com/user-attachments/assets/3ecec65b-43a9-462b-b1ac-ebea66e63df7)
@@ -159,9 +159,9 @@ In the [eks.py](https://github.com/HafssaRaoui/k8s-monitoring-app/blob/main/eks.
 
 Here it's not yet ready but you should see a 1/1
 
-- We're almost done , we need to port forward the port 5000
-  Why ?
-Because **port forwarding** allows us to expose a specific port of a pod to the local system, so we can access the application without needing an external service or LoadBalancer.
+- 🏁 We're almost done , we need to port forward the port 5000\
+ ❓  Why ?\
+Because **port forwarding** allows us to expose a specific port of a pod to the local system, so we can access the application without needing an external service or LoadBalancer.\
 Do that by the following command :
 ```
 port forward svc/service-name 5000:5000
