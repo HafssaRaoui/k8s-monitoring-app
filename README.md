@@ -4,7 +4,7 @@ This project demonstrates how to deploy a simple Flask application on a Kubernet
 Initially the application shows the CPU and memory utilization percentage used by the system. \
 Once containerized, it measures the resource usage inside the container, not the underlying system.
 ### 📢 A little heat up before we start
-In the following I will go through the different steps by I which I completed the project  \
+In the following I will go through the different steps by  which I completed the project  \
 Once read ...\
 Get yourself to work  !
 
@@ -14,11 +14,11 @@ Get yourself to work  !
 - programmatic access to aws cli 
 - docker
 - kubectl
-- your favorite code editor (No arguing needed it should be VScode )
+- your favorite code editor (No arguing needed 🤨 ,VScode is the best )
 
 🚨🚨**IMPORTANT** : 
 
-Make sure to delete the node group , the cluster , the repository and the access key by the end of the project to avoid charges .
+Make sure to delete the created aws ressources : the node group , the cluster , the repository and the access key by the end of the project to avoid charges .
 
 ### How to enable programmatic access to aws cli from your machine :
 - Access security credentials section in your aws account
@@ -30,7 +30,7 @@ Make sure to delete the node group , the cluster , the repository and the access
 aws configure
 ```
 - Provide your key credentials \
-  And that's it ✅
+  And that's it ✅ all done (well not literally)
 
 ### 🔍 Overview of the project workflow :
 - Code the monitoring app
@@ -49,17 +49,17 @@ aws configure
 
 This step won't take much time , the src code is already available on the repository \
 The main application code is found in [app.py](https://github.com/HafssaRaoui/k8s-monitoring-app/blob/main/app.py)  .\
-You will notice that we used the module **psutils** which is a python library for retrieving information on running processes and system utilization (CPU, memory, disks, network ...)
+You will notice that we used the module **psutil** which is a python library for retrieving information on running processes and system utilization (CPU, memory, disks, network ...)
 
-⚠️ All the required modules a listed in the [requirements.txt](https://github.com/HafssaRaoui/k8s-monitoring-app/blob/main/requirements.txt)
+⚠️ All the required modules are listed in the [requirements.txt](https://github.com/HafssaRaoui/k8s-monitoring-app/blob/main/requirements.txt)\
 To install all requirements at once run : 
 ```
 pip3 install -r requirements.txt
 ```
 😁 After that hopefully you will say goodbye to  the dependencies headache . (If not try  upgrading pip)
 
-- On linux OS you might face an issue about python **external package management** , which means you are not allowed to change tha packages outside of the **/usr/lib/python3.X directory** \
-To fix that , browse to /usr/lib/python3.X , remove the EXTERNALLY-MANAGED file or rename it to  EXTERNALLY-MANAGED.back
+- On linux OS you might face an issue about python **external package management** , which means you are not allowed to modify packages outside of the **/usr/lib/python3.X directory** \
+To fix that , navigate to /usr/lib/python3.X , remove the EXTERNALLY-MANAGED file or rename it to  EXTERNALLY-MANAGED.back
 
 - You will notice that the index function returns the template [index.html](https://github.com/HafssaRaoui/k8s-monitoring-app/blob/main/templates/index.html) so make sure to add it too .
 
@@ -70,7 +70,7 @@ python3 app.py
 Browse to the displayed url , typically Flask runs on http://localhost:5000/
 You should see something like this : 
 ![Screenshot from 2025-04-03 12-09-26](https://github.com/user-attachments/assets/daf16644-4b98-458c-8883-8d95c48159ce) \
-Try to refresh the browser , the values will change since the measurement is done on real time
+Try to refresh the browser , the values will change since the measurements are done on real time
 
 ## Step 2: Dockerize the application
 
@@ -174,5 +174,5 @@ Now the application should be accessible via http://localhost:5000/ \
 
 🚨🚨**IMPORTANT** : 
 
-Make sure to delete the node group , the cluster , the repository and the access key by the end of the project to avoid charges .
+Make sure to delete the created aws ressources : the node group , the cluster , the repository and the access key by the end of the project to avoid charges .
 
